@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: spring-boot-framework-dev
+
+logging:
+  level:
+    com.example.framework: DEBUG
+    org.springframework: INFO
+    org.springframework.web: DEBUG
+    org.springframework.boot: INFO
+    org.hibernate: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/application-dev.log
+
+# Development specific configurations
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics

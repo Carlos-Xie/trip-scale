@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: spring-boot-framework-prod
+
+logging:
+  level:
+    com.example.framework: WARN
+    org.springframework: WARN
+    org.springframework.web: WARN
+    org.springframework.boot: WARN
+    org.hibernate: WARN
+    org.apache: WARN
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/application-prod.log
+
+# Production specific configurations
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
