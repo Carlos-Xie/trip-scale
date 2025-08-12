@@ -1,4 +1,4 @@
-package com.example.framework.exception;
+package com.pkfare.tripscale.exception;
 
 /**
  * Exception thrown when input validation fails.

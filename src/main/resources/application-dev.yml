@@ -23,3 +23,26 @@ management:
     web:
       exposure:
         include: health,info,metrics
+
+# External service configurations for development
+external:
+  dify:
+    base-url: http://localhost:8001
+    api-key: dev-dify-api-key
+    timeout-seconds: 30
+    max-retries: 2
+    retry-delay-ms: 500
+  
+  memory:
+    base-url: http://localhost:8002
+    api-key: dev-memory-api-key
+    timeout-seconds: 15
+    max-retries: 2
+    retry-delay-ms: 300
+  
+  trip-knowledge:
+    base-url: http://localhost:8003
+    api-key: dev-trip-knowledge-api-key
+    timeout-seconds: 20
+    max-retries: 2
+    retry-delay-ms: 500

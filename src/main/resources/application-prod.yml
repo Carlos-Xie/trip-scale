@@ -25,3 +25,26 @@ management:
     web:
       exposure:
         include: health
+
+# External service configurations for production
+external:
+  dify:
+    base-url: ${DIFY_BASE_URL}
+    api-key: ${DIFY_API_KEY}
+    timeout-seconds: 30
+    max-retries: 3
+    retry-delay-ms: 1000
+  
+  memory:
+    base-url: ${MEMORY_BASE_URL}
+    api-key: ${MEMORY_API_KEY}
+    timeout-seconds: 15
+    max-retries: 3
+    retry-delay-ms: 500
+  
+  trip-knowledge:
+    base-url: ${TRIP_KNOWLEDGE_BASE_URL}
+    api-key: ${TRIP_KNOWLEDGE_API_KEY}
+    timeout-seconds: 20
+    max-retries: 3
+    retry-delay-ms: 1000

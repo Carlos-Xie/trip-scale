@@ -18,3 +18,58 @@ logging:
     file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
   file:
     name: logs/application.log
+
+# External service configurations
+external:
+  dify:
+    base-url: ${DIFY_BASE_URL:http://localhost:8001}
+    api-key: ${DIFY_API_KEY:mock-api-key}
+    timeout-seconds: 30
+    max-retries: 3
+    retry-delay-ms: 1000
+  
+  memory:
+    base-url: ${MEMORY_BASE_URL:http://localhost:8002}
+    api-key: ${MEMORY_API_KEY:mock-api-key}
+    timeout-seconds: 15
+    max-retries: 3
+    retry-delay-ms: 500
+  
+  trip-knowledge:
+    base-url: ${TRIP_KNOWLEDGE_BASE_URL:http://localhost:8003}
+    api-key: ${TRIP_KNOWLEDGE_API_KEY:mock-api-key}
+    timeout-seconds: 20
+    max-retries: 3
+    retry-delay-ms: 1000
+
+# Mock data configuration for MemoryService
+mock:
+  memory:
+    user-data:
+      recent-focus-destinations:
+        - "Japan"
+        - "Europe" 
+        - "Southeast Asia"
+        - "New Zealand"
+      travel-styles:
+        - "Cultural"
+        - "Adventure"
+        - "Relaxation"
+        - "Food & Drink"
+        - "Photography"
+      likes:
+        - "Museums and galleries"
+        - "Local cuisine"
+        - "Nature and hiking"
+        - "Photography"
+        - "Historical sites"
+        - "Local markets"
+        - "Beach activities"
+        - "Mountain views"
+      hates:
+        - "Crowded tourist traps"
+        - "Extreme sports"
+        - "Long flights over 12 hours"
+        - "Very expensive restaurants"
+        - "Rainy weather destinations"
+      age: 28

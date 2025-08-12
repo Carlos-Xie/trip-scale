@@ -1,4 +1,4 @@
-package com.example.framework.exception;
+package com.pkfare.tripscale.exception;
 
 /**
  * Base class for all business-related exceptions in the application.
