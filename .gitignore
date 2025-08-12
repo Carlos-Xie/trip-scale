@@ -1,5 +1,6 @@
 .kiro/specs/*
 .mvn/*
+.idea/*
 target/*
 logs/*
 mvnw
