@@ -7,7 +7,7 @@ spring:
 
 logging:
   level:
-    com.example.framework: WARN
+    com.pkfare.tripscale: WARN
     org.springframework: WARN
     org.springframework.web: WARN
     org.springframework.boot: WARN

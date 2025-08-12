@@ -7,7 +7,7 @@ spring:
 
 logging:
   level:
-    com.example.framework: DEBUG
+    com.pkfare.tripscale: DEBUG
     org.springframework: INFO
     org.springframework.web: DEBUG
     org.springframework.boot: INFO
